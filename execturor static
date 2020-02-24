@@ -1,0 +1,3 @@
+Method m = MyClass.class.getDeclaredMethod("myMethod", Integer.TYPE);
+m.setAccessible(true); //if security settings allow this
+Object o = m.invoke(null, 23); //use null if the method is static
