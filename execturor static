@@ -7,3 +7,11 @@ public static void main(String args[]) throws Exception, SecurityException {
 		Method m = Test.class.getDeclaredMethod("method1", Object.class);
 		m.setAccessible(true);
 		String str = (String) m.invoke(null, "debabrata");
+		
+public void a1() throws Exception, SecurityException {
+		Method m = Test.class.getDeclaredMethod("method1", String.class, java.util.List.class);
+		m.setAccessible(true);
+		List<String> list1 = null;
+		String str = (String) m.invoke(null, "debabrata nayak", list1);
+	}
+
