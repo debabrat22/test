@@ -1,3 +1,9 @@
 Method m = MyClass.class.getDeclaredMethod("myMethod", Integer.TYPE);
 m.setAccessible(true); //if security settings allow this
 Object o = m.invoke(null, 23); //use null if the method is static
+
+
+public static void main(String args[]) throws Exception, SecurityException {
+		Method m = Test.class.getDeclaredMethod("method1", Object.class);
+		m.setAccessible(true);
+		String str = (String) m.invoke(null, "debabrata");
