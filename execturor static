@@ -22,8 +22,19 @@ public void a1() throws Exception, SecurityException {
 		List<String>[] list1 = null;
 		String str = (String) m.invoke(null, "debabrata nayak", list1);
 	}
+
+========================================================================================================================
+//argument type - Map<User, String>
+
+in this case-
+
+Class[] argTypes = new Class[] { String[].class };
+        Method main = c.getDeclaredMethod("main", argTypes);
+        String[] mainArgs = Arrays.copyOfRange(args, 1, args.length);
+        System.out.format("invoking %s.main()%n", c.getName());
+        main.invoke(null, (Object)mainArgs);
 	
-	==================================================
+==================================================
 	
 	Optional Demo
 	
