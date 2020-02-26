@@ -22,4 +22,31 @@ public void a1() throws Exception, SecurityException {
 		List<String>[] list1 = null;
 		String str = (String) m.invoke(null, "debabrata nayak", list1);
 	}
+	
+	==================================================
+	
+	Optional Demo
+	
+	public static void optionalDemo( ) {
+		
+		Function<String, String> getSecondWord = (String s) -> 
+					{
+						return s.split(" ").length>1 ? s.split(" ")[1] : null;};
+			
+					}
+		Function<String, Integer> getLetterCount = t -> t.length();
+		Integer count = getSecondWord.andThen(getLetterCount).apply("nayak");
+		System.out.println(count);
+		
+//will throw NullPointerException
+
+//to prevent this
+
+Optional<String> o = Optional<T>.ofNullable(getSecondWord.apply("nayak"));
+System.out.println(o.isPresent());
+
+//will not throw any exception, here if the object is present then object would be returned else empty Optional object would be returned,
+but no NullPoionterException would be thrown.
+
+		
 
