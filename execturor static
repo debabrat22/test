@@ -34,6 +34,13 @@ Class[] argTypes = new Class[] { String[].class };
         System.out.format("invoking %s.main()%n", c.getName());
         main.invoke(null, (Object)mainArgs);
 	
+	
+Test1 test = new Test1();
+		Method m = test.getClass().getDeclaredMethod("method1", String.class, java.util.List[].class);
+		m.setAccessible(true);
+		List<String>[] list1 = null;
+		String str = (String) m.invoke(test, "debabrata nayak", list1);
+	
 ==================================================
 	
 	Optional Demo
