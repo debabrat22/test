@@ -77,3 +77,5 @@ Use @SuppressWarnings(‘cs.RULENAME, cs.OTHERULE’) to specify multiple rules,
 
 Use @SuppressWarnings(‘all’) to ignore all rules.
 
+For suppressing multiple warnings you can do it like this @SuppressWarnings({"squid:S2078", "squid:S2076"})
+
