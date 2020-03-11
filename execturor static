@@ -66,5 +66,14 @@ System.out.println(o.isPresent());
 //will not throw any exception, here if the object is present then object would be returned else empty Optional object would be returned,
 but no NullPoionterException would be thrown.
 
-		
+================================================================
+sonar
+================================================================
+Use @SuppressWarnings(‘cs.RULENAME’) for a specific rule name.
+
+@SuppressWarnings(‘sf:RULENAME’) is also allowed.
+
+Use @SuppressWarnings(‘cs.RULENAME, cs.OTHERULE’) to specify multiple rules, separating each new rule with a comma.
+
+Use @SuppressWarnings(‘all’) to ignore all rules.
 
