@@ -87,4 +87,25 @@ when(listMock.size()).thenReturn(2).thenReturn(3)
 assertEquals(2, listMock.size())
 assertEquals(3, listMock.size())
 
+====
+public boolean isInteger(String s) {
+		try {
+			Integer.parseInt(s);
+		} catch (NumberFormatException e) {
+			return false;
+		}
+		return true;
+	}
+	
+MathUtils mockMathUtils = mock(MathUtils.class);
+	when(mockMathUtils.add(1, 1)).thenReturn(2);
+	when(mockMathUtils.isInteger(anyString())).thenReturn(true);
+	
+assertEquals(2, mockMathUtils.add(1, 1));
+	assertTrue(mockMathUtils.isInteger("1"));
+	assertTrue(mockMathUtils.isInteger("999"));
+
+
+
+======
 
