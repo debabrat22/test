@@ -79,3 +79,12 @@ Use @SuppressWarnings(‘all’) to ignore all rules.
 
 For suppressing multiple warnings you can do it like this @SuppressWarnings({"squid:S2078", "squid:S2076"})
 
+================================================
+mockito
+================================================
+
+when(listMock.size()).thenReturn(2).thenReturn(3)
+assertEquals(2, listMock.size())
+assertEquals(3, listMock.size())
+
+
